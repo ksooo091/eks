@@ -74,7 +74,7 @@ resource "aws_eks_node_group" "spot" {
 resource "aws_eks_cluster" "eks_cluster" {
   name     = "test_app_eks_cluster"
   role_arn = aws_iam_role.eks_cluster_role.arn
-  version  = "1.27"
+  version  = "1.28"
 
   vpc_config {
     subnet_ids              = aws_subnet.k8s_subnet[*].id
